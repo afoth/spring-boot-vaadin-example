@@ -32,4 +32,10 @@ public class User {
     @Column(nullable = false)
     String encryptedPassword;
 
+    public User(User user) {
+        this.id = user.id;
+        this.name = user.name;
+        this.email = user.email;
+        this.encryptedPassword = user.encryptedPassword;
+    }
 }

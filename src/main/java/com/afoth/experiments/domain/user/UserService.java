@@ -20,4 +20,8 @@ public class UserService {
                 .map(User::getEmail)
                 .collect(Collectors.toList());
     }
+
+    public User saveUser(User user){
+        return userRepository.save(user);
+    }
 }
